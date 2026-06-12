@@ -25,7 +25,7 @@ namespace ProyectoGenericoNet.Api.Controllers
         public string Get()
         {
             var variablePrueba = _configuration["VARIABLE_PRUEBA"] ?? "(no configurada)";
-            var message = $"Hola Mundo desde el controlador WeatherForecastController. VARIABLE_PRUEBA = {variablePrueba}";
+            var message = $"Hola World desde el controlador WeatherForecastController. VARIABLE_PRUEBA = {variablePrueba}";
             return message;
         }
     }
