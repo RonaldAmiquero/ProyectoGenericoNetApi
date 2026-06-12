@@ -18,16 +18,11 @@ namespace ProyectoGenericoNet.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet(Name = "messi")]
+        public string Get()
         {
-            return Enumerable.Range(1, 2).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var message = "Hola Mundo desde el controlador WeatherForecastController";
+            return message;
         }
     }
 }
